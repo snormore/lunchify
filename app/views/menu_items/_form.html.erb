@@ -1,0 +1,14 @@
+<%= form_for(@menu_item) do |f| %>
+  <div>
+    <div><%= f.label :food_item %></div>
+    <div><%= collection_select(:menu_item, :food_item_id, FoodItem.all, :id, :name, {:prompt=>true}) %></div>
+  </div>
+  <div>
+    <div><%= f.label :menu %></div>
+    <div><%= collection_select(:menu_item, :menu_id, Menu.all, :id, :day, {:prompt=>true}) %></div>
+  </div>
+<br>
+
+<%= f.submit %>
+
+<% end %>

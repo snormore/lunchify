@@ -1,0 +1,14 @@
+<%= form_for(@food_item) do |f| %>
+  <div>
+    <div><%= f.label :name %></div>
+    <div><%= f.text_field :name %></div>
+  </div>
+  <div>
+    <div><%= f.label :description %></div>
+    <div><%= f.text_area :description %></div>
+  </div>
+
+  <br>
+  <%= f.submit %>
+ 
+<% end %>
