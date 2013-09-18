@@ -18,6 +18,15 @@ class MenuItemsController < ApplicationController
     @menu_item = MenuItem.find(params[:id])
   end
 
+  def votes
+    vote = Vote.new(value: params[:value], menu_item_id: params[:id])
+    if vote.save
+      redirect_to :back, notice: "Thank you for voting."
+    else
+      redirect_to :back, alert: "Unable to vote, perhaps you already did."
+    end
+  end
+
   private
 
   def menu_item_params
