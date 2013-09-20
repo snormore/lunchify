@@ -11,7 +11,7 @@ class MenuItemsController < ApplicationController
   def create
     @menu_item = MenuItem.new(menu_item_params)
     @menu_item.save
-    redirect_to @menu_item
+    redirect_to menus_path
   end
 
   def edit

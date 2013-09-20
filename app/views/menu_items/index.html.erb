@@ -1,0 +1,19 @@
+<h1>Menu Items</h1>
+
+
+
+<br>
+<table class="table table-hover">
+  <% @menu_items.each do |menu_item| %>
+    
+
+  <tr >
+    <td><h3><%= menu_item.name %></h3></td>
+  </tr>
+  <tr>
+    <td><%= menu_item.description %></td>
+  </tr>
+ 
+    
+<% end %>
+</table> 

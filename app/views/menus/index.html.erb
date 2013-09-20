@@ -1,22 +1,6 @@
-<h1>Today's Menu</h1>
-
-
-
-<br>
-<table >
-  <% @menus.each do |menu| %>
-    
-
-  <tr >
-  <td>
-    <%= menu.day %>
-  </td>
-  <td>
-    <h4>Menu Items .....</h4>
-  </td>
-  </tr>
- 
-    
+<% @menus.each do |menu| %>
+  <h2><%= menu.day.strftime("%A %B %-d") %></h2>
+  <div class="jumbotron">
+    <%= render menu.food_items %>
+  </div>
 <% end %>
-
-</table> 

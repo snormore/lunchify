@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130918175000) do
+ActiveRecord::Schema.define(version: 20130920013622) do
 
   create_table "food_items", force: true do |t|
     t.string   "name"
@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 20130918175000) do
   end
 
   create_table "votes", force: true do |t|
-    t.integer  "votes"
+    t.integer  "votes",        default: 0
     t.integer  "menu_item_id"
     t.datetime "created_at"
     t.datetime "updated_at"

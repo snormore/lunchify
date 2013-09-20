@@ -1,0 +1,17 @@
+<% if @food_item.errors.any? %>
+  <div id="error_explanation">
+    <div class="alert alert-danger container alert-dismissable">
+      The form contains <%= pluralize(@resource.errors.count, "error") %>.
+      <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>
+    </div>
+
+    <div class="well">
+      <ul>
+        <% @food_item.errors.full_messages.each do |msg| %>
+          <li> <%= msg %></li>
+        <% end -%>
+      </ul>
+    </div>
+
+  </div>
+<% end %>

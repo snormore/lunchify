@@ -11,7 +11,7 @@ class FoodItemsController < ApplicationController
     @food_item = FoodItem.new(food_item_params)
     if @food_item.save
       flash[:success] = "Thank you for submitting the Food Item!"      
-      redirect_to food_items_path, notice: "Thank you for Creating a Food Item"
+      redirect_to food_items_path
     else
       flash[:danger] = "Whoops! You've made an error while creating a Food Item."
       render action: :new
