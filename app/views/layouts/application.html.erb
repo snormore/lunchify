@@ -9,11 +9,12 @@
   <body>
     <div class="container">
     <div class="header">
-      <ul class="nav nav-pills pull-right">
-        <li class="active"><%= link_to 'Menus', menus_path %></li>
-        <li><%= link_to 'Add Food', new_food_item_path %></li>
-        <li><%= link_to 'Add Menu Item', new_menu_item_path %></li>
-        <li><%= link_to 'Add Menu', new_menu_path %></li>
+      <ul class="nav nav-pills pull-right">    
+
+        <li class="<%= 'active' if current_page?(menus_path) %>"><%= link_to 'Menus', menus_path %></li>
+        <li class="<%= 'active' if current_page?(new_food_item_path) %>"><%= link_to 'Add Food', new_food_item_path %></li>
+        <li class="<%= 'active' if current_page?(new_menu_item_path) %>"><%= link_to 'Add Menu Item', new_menu_item_path %></li>
+        <li class="<%= 'active' if current_page?(new_menu_path) %>"><%= link_to 'Add Menu', new_menu_path %></li>
       </ul>
       <%= link_to image_tag("lunchify.png"), menus_path %>
     </div>

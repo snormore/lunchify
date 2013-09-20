@@ -17,6 +17,10 @@ border: 3px solid #cccccc;
   margin: 0 auto;
 }
 
+.form-control:focus {
+border-color: #96BF47;
+}
+
 .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
 color: white;
 background-color: #96BF47;
