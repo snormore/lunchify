@@ -1,6 +1,6 @@
 <% @menus.each do |menu| %>
   <h2><%= menu.day.strftime("%A %B %-d") %></h2>
   <div class="jumbotron">
-    <%= render menu.food_items %>
+    <%= render partial: "menu", locals: {menu: menu} %>
   </div>
 <% end %>

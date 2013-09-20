@@ -1,0 +1,22 @@
+<table class="table table-hover">
+  <% menu.menu_items.each do |menu_item| %>
+    
+  <tr >
+    
+    <td><h3><%= menu_item.food_item.name %></h3></td>
+    <td>Votes: <%= menu_item.vote.votes %></td>
+    <td>
+
+      <span class="glyphicon glyphicon-chevron-up"><%= menu_item.vote.votes %></span>
+      <span class="glyphicon glyphicon-chevron-down"></span>
+
+    </td>
+
+  </tr>
+  <tr>
+    <td><%= menu_item.food_item.description %></td>
+  </tr>
+ 
+    
+  <% end %>
+</table> 

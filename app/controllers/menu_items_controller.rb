@@ -10,6 +10,9 @@ class MenuItemsController < ApplicationController
 
   def create
     @menu_item = MenuItem.new(menu_item_params)
+    @vote = Vote.new
+    @vote.save
+    @menu_item.vote_id = @vote.id
     @menu_item.save
     redirect_to menus_path
   end

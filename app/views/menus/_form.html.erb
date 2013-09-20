@@ -1,10 +1,18 @@
 <%= form_for(@menu) do |f| %>
   <div>
     <div><%= f.label :day %></div>
-    <div><%= f.text_field :day %></div>
+    <!-- <input type="text" data-behaviour='datepicker' > -->
+  
+
+    <div><%#= f.text_field :day, :id => "datepicker"   %></div>
+
+    <%= f.text_field :day, :id => "datepicker", :value => Date.today %>
+<script>
+$('#datepicker').datepicker({format: 'yyyy-mm-dd'});
+</script>
   </div>
 
   <br>
-  <%= f.submit %>
+  <%= f.submit "Submit" , class: "btn btn-primary" %>
  
 <% end %>
